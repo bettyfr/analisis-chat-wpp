@@ -3,4 +3,3 @@ regex
 demoji
 plotly
 wordcloud
-nltk
