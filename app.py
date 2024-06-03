@@ -155,7 +155,9 @@ fig_dia.update_traces(mode='markers+lines', marker=dict(size=10))
 fig_dia.update_xaxes(title_text='Día', tickangle=30)
 fig_dia.update_yaxes(title_text='# Mensajes')
 
-date_df_fecha = df.groupby('Fecha').sum().reset_index()
+//date_df_fecha = df.groupby('Fecha').sum().reset_index()
+date_df_fecha = df.groupby('Fecha').sum(numeric_only=True).reset_index()
+
 
 fig_fecha = px.line(date_df_fecha, x='Fecha', y='# Mensajes por día', color_discrete_sequence=['salmon'], template='plotly_dark')
 fig_fecha.update_xaxes(title_text='Fecha', tickangle=45, nticks=35)
