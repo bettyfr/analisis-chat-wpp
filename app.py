@@ -155,7 +155,7 @@ fig_dia.update_traces(mode='markers+lines', marker=dict(size=10))
 fig_dia.update_xaxes(title_text='Día', tickangle=30)
 fig_dia.update_yaxes(title_text='# Mensajes')
 
-//date_df_fecha = df.groupby('Fecha').sum().reset_index()
+#date_df_fecha = df.groupby('Fecha').sum().reset_index()
 date_df_fecha = df.groupby('Fecha').sum(numeric_only=True).reset_index()
 
 
