@@ -21,7 +21,7 @@ def IniciaConFechaYHora(s):
 
 # Función para encontrar miembros del grupo
 def EncontrarMiembro(s):
-    patrones = ['Betty Flores Rosales:', 'Gato:']
+    patrones = ['Betty:', 'Gato:']
     patron = '^' + '|'.join(patrones)
     resultado = re.match(patron, s)
     return bool(resultado)
@@ -34,7 +34,7 @@ def ObtenerPartes(linea):
     Fecha = splitFechaHora[0]
     Hora = splitFechaHora[1]
     MensajeCompleto = ' - '.join(splitLinea[1:])
-    for patron in ['Betty Flores Rosales:', 'Gato:']:
+    for patron in ['Betty:', 'Gato:']:
         if patron in MensajeCompleto:
             Miembro, Mensaje = MensajeCompleto.split(patron, 1)
             Miembro = patron[:-1]
